@@ -16,6 +16,9 @@ export abstract class TransporeonRequest<TBody = undefined> {
                 'Authorization': authHeader
             },
             body: (this.requestBody) ? JSON.stringify(this.requestBody) : undefined
+        }).catch((e)=>{
+            //TODO:Error handling;
+            return e
         });
     }
     
