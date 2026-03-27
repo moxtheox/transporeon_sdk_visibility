@@ -10,7 +10,6 @@ export class TransportCreationRequest<iTransportCreationRequestBody> extends Tra
         identifier:string,
         id_type:TransportIdentifierType = TransportIdentifierType.TRANSPORT_NUMBER) {
         super();
-        if(!body) throw new Error('TransportCreationRequest body is missing');
         this.requestBody = body;
         this.RESOURCE_PATH = `${this.BASE_SERVICE}${id_type}/${identifier}`;
     }
